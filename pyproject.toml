@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "tabulator-gui"
+version = "0.1.0"
+description = "A GUI for the RO Crate Tabulator"
+authors = ["Hamish Croser <hamish.croser@sydney.edu.au>"]
+readme = "README.md"
+license = "MIT"
+packages = [{include = "src/tabulator_gui"}]
+exclude = ["**/.ipynb_checkpoints/*", "**/log.txt"]
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+panel = "~=1.4.0"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "~=4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
