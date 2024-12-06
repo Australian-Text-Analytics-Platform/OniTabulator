@@ -1,17 +1,18 @@
 [tool.poetry]
-name = "tabulator-gui"
+name = "oni-tabulator"
 version = "0.1.0"
-description = "A GUI for the RO Crate Tabulator"
+description = "A GUI for the RO Crate Tabulator that interfaces with the Oni API"
 authors = ["Hamish Croser <hamish.croser@sydney.edu.au>"]
 readme = "README.md"
 license = "MIT"
-packages = [{include = "src/tabulator_gui"}]
+packages = [{include = "src/oni_tabulator"}]
 exclude = ["**/.ipynb_checkpoints/*", "**/log.txt"]
 
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.13"
+python = ">=3.11,<3.13"
 panel = "~=1.4.0"
+rocrate-tabular = { git = "git@github.com:Sydney-Informatics-Hub/rocrate-tabular.git", branch = "feature-file-objects" }
 
 [tool.poetry.group.dev]
 optional = true
